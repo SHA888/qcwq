@@ -1,0 +1,21 @@
+# Ignore virtual environment
+qiskit_env/
+venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore log files
+*.log
+*.out
+*.err
+
+# Ignore hidden system files (macOS/Linux)
+.DS_Store
+*.swp
