@@ -22,7 +22,7 @@
           "id": 2,
           "title": "Define dependencies and create requirements.txt",
           "description": "Document all project dependencies with specific version requirements",
-          "status": "pending",
+          "status": "done",
           "dependencies": [
             1
           ],
