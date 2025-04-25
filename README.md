@@ -4,6 +4,17 @@
 
 ---
 
+## 🚀 Project Structure
+
+This repository is organized as follows:
+
+- `/notebooks/` — Jupyter notebooks for tutorials, experiments, and hands-on learning.
+- `/scripts/` — Python scripts for automation, validation, and CLI tools.
+- `/docs/` — Documentation, guides, and roadmap.
+- `/tests/` — Test scripts and validation code.
+
+---
+
 ## 🚀 Project Roadmap
 A practical, step-by-step learning path is now available in [`docs/ROADMAP.md`](docs/ROADMAP.md).
 
@@ -37,7 +48,7 @@ A practical, step-by-step learning path is now available in [`docs/ROADMAP.md`](
 ## 🗂️ Documentation
 - [Project Roadmap](docs/ROADMAP.md)
 - [Contributing Guide](docs/CONTRIBUTING.md)
-- [Installation Guide](INSTALLATION.md)
+- [Installation Guide](docs/INSTALLATION.md)
 
 ---
 

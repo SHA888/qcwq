@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Set up project structure and environment configuration",
       "description": "Create the initial project structure with directories for notebooks, scripts, docs, and tests. Develop environment setup guides and validation scripts.",
-      "status": "pending",
+      "status": "in-progress",
       "dependencies": [],
       "priority": "high",
       "details": "Create the following directory structure: `/notebooks` (for Jupyter notebooks), `/scripts` (for Python scripts), `/docs` (for documentation), `/tests` (for test scripts). Create a requirements.txt file listing all dependencies (Qiskit, NumPy, Matplotlib, etc.). Write a detailed installation guide in docs/setup.md covering Python, pip, virtual environments, and Qiskit installation for Windows, macOS, and Linux. Develop a validation script (scripts/validate_env.py) that checks if all required packages are installed and prints their versions. Include a simple 'Hello Quantum World' notebook and script that creates and measures a basic circuit.",
@@ -14,7 +14,7 @@
           "id": 1,
           "title": "Create basic directory structure and initialize repository",
           "description": "Set up the foundational project structure with all required directories and initialize version control",
-          "status": "pending",
+          "status": "done",
           "dependencies": [],
           "details": "Create the root project directory and the following subdirectories: `/notebooks`, `/scripts`, `/docs`, and `/tests`. Initialize git repository with appropriate .gitignore file for Python projects. Add README.md with project title, brief description, and directory structure explanation. Ensure proper file permissions and create empty __init__.py files in directories that should be importable packages."
         },

@@ -1,6 +1,6 @@
 # Task ID: 1
 # Title: Set up project structure and environment configuration
-# Status: pending
+# Status: in-progress
 # Dependencies: None
 # Priority: high
 # Description: Create the initial project structure with directories for notebooks, scripts, docs, and tests. Develop environment setup guides and validation scripts.
@@ -11,7 +11,7 @@ Create the following directory structure: `/notebooks` (for Jupyter notebooks), 
 Run the validation script to ensure it correctly identifies installed/missing packages. Test the installation guide on a clean environment to verify it works as expected. Ensure the example notebook runs without errors.
 
 # Subtasks:
-## 1. Create basic directory structure and initialize repository [pending]
+## 1. Create basic directory structure and initialize repository [done]
 ### Dependencies: None
 ### Description: Set up the foundational project structure with all required directories and initialize version control
 ### Details:
