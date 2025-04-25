@@ -1,0 +1,772 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Set up project structure and environment configuration",
+      "description": "Create the initial project structure with directories for notebooks, scripts, docs, and tests. Develop environment setup guides and validation scripts.",
+      "status": "pending",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Create the following directory structure: `/notebooks` (for Jupyter notebooks), `/scripts` (for Python scripts), `/docs` (for documentation), `/tests` (for test scripts). Create a requirements.txt file listing all dependencies (Qiskit, NumPy, Matplotlib, etc.). Write a detailed installation guide in docs/setup.md covering Python, pip, virtual environments, and Qiskit installation for Windows, macOS, and Linux. Develop a validation script (scripts/validate_env.py) that checks if all required packages are installed and prints their versions. Include a simple 'Hello Quantum World' notebook and script that creates and measures a basic circuit.",
+      "testStrategy": "Run the validation script to ensure it correctly identifies installed/missing packages. Test the installation guide on a clean environment to verify it works as expected. Ensure the example notebook runs without errors.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create basic directory structure and initialize repository",
+          "description": "Set up the foundational project structure with all required directories and initialize version control",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create the root project directory and the following subdirectories: `/notebooks`, `/scripts`, `/docs`, and `/tests`. Initialize git repository with appropriate .gitignore file for Python projects. Add README.md with project title, brief description, and directory structure explanation. Ensure proper file permissions and create empty __init__.py files in directories that should be importable packages."
+        },
+        {
+          "id": 2,
+          "title": "Define dependencies and create requirements.txt",
+          "description": "Document all project dependencies with specific version requirements",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create requirements.txt in the root directory listing all required packages with version specifications: Qiskit (>=0.36.0), NumPy (>=1.20.0), Matplotlib (>=3.4.0), Jupyter (>=1.0.0), pytest (>=6.2.5). Include comments explaining the purpose of each dependency. Group dependencies by functionality (quantum computing, data analysis, visualization, development tools). Add instructions for installing with pip at the top of the file."
+        },
+        {
+          "id": 3,
+          "title": "Write cross-platform installation guide",
+          "description": "Create comprehensive documentation for environment setup across different operating systems",
+          "status": "pending",
+          "dependencies": [
+            2
+          ],
+          "details": "Create docs/setup.md with detailed installation instructions for Windows, macOS, and Linux. Include sections on: 1) Installing Python 3.8+ with download links, 2) Setting up virtual environments (venv/conda), 3) Installing dependencies via requirements.txt, 4) Verifying Qiskit installation, 5) Troubleshooting common issues. Add screenshots or terminal commands for each platform. Include information about recommended IDEs and extensions for quantum computing development."
+        },
+        {
+          "id": 4,
+          "title": "Develop environment validation script",
+          "description": "Create a script to verify that all dependencies are correctly installed",
+          "status": "pending",
+          "dependencies": [
+            2
+          ],
+          "details": "Create scripts/validate_env.py that: 1) Checks Python version (>=3.8), 2) Attempts to import all required packages and catches ImportErrors, 3) Prints installed versions of all dependencies, 4) Verifies Qiskit can connect to IBMQ (optional test), 5) Runs a simple quantum circuit to ensure full functionality, 6) Outputs a summary report of the environment status. Include colorized terminal output for pass/fail status and add command-line arguments for different validation levels (basic/complete)."
+        },
+        {
+          "id": 5,
+          "title": "Create 'Hello Quantum World' examples",
+          "description": "Develop introductory examples demonstrating basic quantum circuit creation and measurement",
+          "status": "pending",
+          "dependencies": [
+            1,
+            2,
+            4
+          ],
+          "details": "Create notebooks/hello_quantum_world.ipynb and scripts/hello_quantum_world.py with identical functionality: 1) Import necessary Qiskit modules, 2) Create a simple quantum circuit with 2 qubits (including Hadamard gate and CNOT gate to create entanglement), 3) Add measurement operations, 4) Execute the circuit on a simulator, 5) Display results with visualization (histogram), 6) Include detailed comments explaining each step of the quantum operations. Add markdown cells in the notebook with theoretical explanation and references to Qiskit documentation."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Develop Qiskit basics notebooks and scripts",
+      "description": "Create introductory notebooks and scripts covering Qiskit fundamentals, single-qubit operations, and basic visualizations.",
+      "status": "pending",
+      "dependencies": [
+        1
+      ],
+      "priority": "high",
+      "details": "Create notebooks/01_qiskit_basics/ directory with the following notebooks: 1) Introduction to Qiskit and quantum computing concepts, 2) Single-qubit states and operations, 3) Quantum measurement and visualization. Each notebook should include theoretical explanations, code examples, and interactive exercises. Implement visualization examples using Qiskit's built-in visualization tools for circuits, state vectors, and Bloch spheres. Create corresponding Python scripts in scripts/basics/ that contain the core functionality from the notebooks. Include exercises at the end of each notebook that prompt users to modify circuits and observe results.",
+      "testStrategy": "Execute all notebooks from start to finish to ensure they run without errors. Verify that all visualizations render correctly. Test the interactive exercises to confirm they work as expected and provide meaningful feedback.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create directory structure and outline content for notebooks and scripts",
+          "description": "Set up the required directory structure and create detailed outlines for all three notebooks and corresponding scripts",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create the notebooks/01_qiskit_basics/ and scripts/basics/ directories. Develop detailed outlines for each of the three notebooks (Introduction to Qiskit, Single-qubit states and operations, Quantum measurement and visualization) and their corresponding scripts. Each outline should include section headings, key concepts to cover, planned code examples, and exercise ideas. This foundation will ensure consistent structure and comprehensive coverage across all materials."
+        },
+        {
+          "id": 2,
+          "title": "Implement 'Introduction to Qiskit and quantum computing concepts' notebook",
+          "description": "Create the first notebook covering Qiskit installation, basic quantum computing concepts, and simple circuit creation",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Develop the first notebook with sections on: Qiskit installation and setup, basic quantum computing concepts (qubits, superposition, entanglement), Qiskit's component structure (Terra, Aer, etc.), creating and running a simple quantum circuit, and executing on simulators. Include code examples for each concept, explanatory text, and 2-3 interactive exercises that prompt users to modify basic circuits. Ensure proper markdown formatting with clear headings, explanations, and code comments."
+        },
+        {
+          "id": 3,
+          "title": "Implement 'Single-qubit states and operations' notebook",
+          "description": "Create the second notebook covering single-qubit states, gates, and transformations",
+          "status": "pending",
+          "dependencies": [
+            2
+          ],
+          "details": "Develop the second notebook with sections on: representing single-qubit states, common single-qubit gates (X, Y, Z, H, S, T), gate matrices and their effects, creating circuits with single-qubit operations, and composing operations. Include visualizations of how gates transform states on the Bloch sphere. Create 3-4 interactive exercises that challenge users to implement specific state transformations using different gate combinations. Ensure proper integration with the first notebook by referencing relevant concepts."
+        },
+        {
+          "id": 4,
+          "title": "Implement 'Quantum measurement and visualization' notebook",
+          "description": "Create the third notebook focusing on measurement concepts and visualization techniques",
+          "status": "pending",
+          "dependencies": [
+            3
+          ],
+          "details": "Develop the third notebook with sections on: quantum measurement theory, implementing measurements in Qiskit, visualizing circuits using Qiskit's circuit drawer, visualizing statevectors, visualizing states on the Bloch sphere, and histogram visualization for measurement outcomes. Demonstrate how measurement affects quantum states and how to interpret results. Include 3-4 exercises that prompt users to create circuits, predict measurement outcomes, and use different visualization tools. Ensure all visualization examples use Qiskit's built-in visualization tools."
+        },
+        {
+          "id": 5,
+          "title": "Create corresponding Python scripts for all notebooks",
+          "description": "Extract core functionality from notebooks into standalone Python scripts",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4
+          ],
+          "details": "Create Python scripts in the scripts/basics/ directory that contain the core functionality from each notebook. Each script should be well-documented with docstrings and comments. For the first notebook, create scripts for basic circuit creation and execution. For the second notebook, create scripts for implementing single-qubit operations and transformations. For the third notebook, create scripts for measurement and different visualization techniques. Ensure scripts are modular, reusable, and include error handling. Each script should be importable and usable independently."
+        },
+        {
+          "id": 6,
+          "title": "Review, test, and finalize all materials",
+          "description": "Perform comprehensive testing of all notebooks and scripts, ensuring they work as expected",
+          "status": "pending",
+          "dependencies": [
+            5
+          ],
+          "details": "Test all notebooks and scripts to ensure they execute without errors. Verify that all visualizations render correctly. Check that exercises have clear instructions and work as intended. Review explanations for clarity and accuracy. Test notebooks in a clean environment to ensure all dependencies are properly documented. Add a README.md file in each directory explaining the contents and how to use the materials. Make final adjustments based on testing results and ensure consistent formatting and style across all materials."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Implement quantum gates and circuits tutorials",
+      "description": "Create comprehensive tutorials on quantum gates, multi-qubit operations, and entanglement with interactive examples.",
+      "status": "pending",
+      "dependencies": [
+        2
+      ],
+      "priority": "high",
+      "details": "Create notebooks/02_gates_and_circuits/ directory with notebooks covering: 1) Standard single-qubit gates (X, Y, Z, H, S, T), 2) Multi-qubit gates and operations (CNOT, CZ, SWAP), 3) Creating entangled states (Bell, GHZ), 4) Circuit composition and advanced operations. Include circuit diagrams, matrix representations, and Bloch sphere visualizations for each gate. Develop interactive exercises where users build circuits to create specific quantum states. Create utility functions in scripts/utils/circuit_helpers.py for common circuit operations. Include challenges that test understanding, such as creating specific entangled states or implementing basic quantum protocols.",
+      "testStrategy": "Verify all gates and operations work correctly by comparing simulation results with theoretical expectations. Test the entanglement examples by calculating and visualizing correlation measurements. Ensure all interactive components function properly.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create directory structure and utility module",
+          "description": "Set up the notebooks/02_gates_and_circuits/ directory and implement the circuit_helpers.py utility module with common functions",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create the directory structure for the tutorials. Implement the scripts/utils/circuit_helpers.py module with functions for: circuit visualization, Bloch sphere representation, matrix representation of gates, state vector display, measurement statistics, and circuit composition helpers. Include docstrings and examples for each function."
+        },
+        {
+          "id": 2,
+          "title": "Implement single-qubit gates tutorial notebook",
+          "description": "Create a comprehensive notebook covering standard single-qubit quantum gates with visualizations and examples",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create a notebook titled '01_single_qubit_gates.ipynb' covering X, Y, Z, H, S, and T gates. For each gate, include: mathematical matrix representation, circuit diagram, effect on the Bloch sphere, code examples showing application to different input states, and verification of results. Add interactive exercises where users apply gates to reach specific states. Include challenges with solutions in a hidden cell."
+        },
+        {
+          "id": 3,
+          "title": "Implement multi-qubit gates tutorial notebook",
+          "description": "Create a notebook covering two-qubit gates including CNOT, CZ, and SWAP operations with examples",
+          "status": "pending",
+          "dependencies": [
+            1,
+            2
+          ],
+          "details": "Create a notebook titled '02_multi_qubit_gates.ipynb' covering CNOT, CZ, SWAP, and Toffoli gates. For each gate, include: matrix representation, circuit notation, truth table of operation, code examples showing application on different input states, and verification of results. Demonstrate control and target qubit concepts. Include interactive exercises where users implement specific two-qubit transformations."
+        },
+        {
+          "id": 4,
+          "title": "Implement entanglement tutorial notebook",
+          "description": "Create a notebook focused on quantum entanglement, Bell states, and GHZ states with interactive examples",
+          "status": "pending",
+          "dependencies": [
+            1,
+            3
+          ],
+          "details": "Create a notebook titled '03_quantum_entanglement.ipynb' covering: the concept of entanglement, Bell state preparation circuits, GHZ state preparation, verification of entanglement, and entanglement properties. Include visualizations of the entangled states, measurement correlation demonstrations, and interactive exercises where users create and verify entangled states. Add challenges to create specific entangled states with minimal gates."
+        },
+        {
+          "id": 5,
+          "title": "Implement circuit composition tutorial notebook",
+          "description": "Create a notebook on advanced circuit composition techniques and optimization",
+          "status": "pending",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "details": "Create a notebook titled '04_circuit_composition.ipynb' covering: combining multiple gates, circuit depth and width concepts, circuit equivalence, circuit optimization techniques, parameterized circuits, and circuit decomposition. Include examples of building complex operations from simpler gates. Add interactive exercises where users optimize circuits or find equivalent implementations with different gate sets."
+        },
+        {
+          "id": 6,
+          "title": "Implement quantum protocols tutorial notebook",
+          "description": "Create a notebook demonstrating basic quantum protocols using the gates and circuits from previous tutorials",
+          "status": "pending",
+          "dependencies": [
+            1,
+            4,
+            5
+          ],
+          "details": "Create a notebook titled '05_quantum_protocols.ipynb' implementing basic quantum protocols such as: quantum teleportation, superdense coding, and simple quantum key distribution. For each protocol, explain the theory, implement the circuit, and demonstrate the results with interactive examples. Include challenges where users complete parts of protocols or optimize existing implementations."
+        },
+        {
+          "id": 7,
+          "title": "Create comprehensive README and finalize tutorials",
+          "description": "Create a README for the gates and circuits directory and review/finalize all notebooks",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "details": "Create a README.md file for the notebooks/02_gates_and_circuits/ directory explaining the content and progression of the tutorials. Ensure consistent formatting across all notebooks. Add cross-references between notebooks. Verify all code examples run correctly. Add a glossary of terms. Include suggestions for further learning and references to academic papers. Create a final challenge that combines concepts from all tutorials into one comprehensive exercise."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Develop IBM Quantum hardware integration guide",
+      "description": "Create tutorials for connecting to IBM Quantum hardware, submitting jobs, and analyzing results from real quantum computers.",
+      "status": "pending",
+      "dependencies": [
+        3
+      ],
+      "priority": "medium",
+      "details": "Create notebooks/03_ibm_quantum/ directory with notebooks covering: 1) Setting up IBM Quantum account and saving credentials, 2) Exploring available quantum backends and their properties, 3) Submitting circuits to real quantum hardware, 4) Analyzing and visualizing results from quantum hardware. Write a detailed guide on obtaining and configuring IBM Quantum API token. Create utility functions in scripts/utils/ibm_helpers.py for backend selection, job submission, and result retrieval. Include examples comparing simulator results with real hardware results to demonstrate quantum noise and errors. Add a notebook on queue management and job monitoring for efficient use of IBM Quantum resources.",
+      "testStrategy": "Test the account setup process with a test token. Verify job submission works correctly by running a simple circuit on both simulator and least-busy real backend. Check that results are properly retrieved and visualized. Test error handling for common issues like authentication failures or backend unavailability.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create IBM Quantum account setup and authentication notebook",
+          "description": "Develop a notebook that guides users through creating an IBM Quantum account, obtaining API tokens, and configuring credentials for authentication",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create notebooks/03_ibm_quantum/01_account_setup.ipynb that covers: 1) Step-by-step instructions for creating an IBM Quantum account, 2) Detailed guide on obtaining the API token from the IBM Quantum platform, 3) Code examples for storing and loading credentials securely, 4) Verification steps to confirm successful authentication. Include screenshots of the IBM Quantum dashboard where relevant. Create initial version of scripts/utils/ibm_helpers.py with authentication helper functions."
+        },
+        {
+          "id": 2,
+          "title": "Implement backend exploration and selection utilities",
+          "description": "Create utilities for discovering available quantum backends and a notebook demonstrating how to explore their properties and capabilities",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create notebooks/03_ibm_quantum/02_backend_exploration.ipynb that: 1) Shows how to list available backends, 2) Demonstrates retrieving and interpreting backend properties (qubits, connectivity, error rates, etc.), 3) Explains backend status and availability checking. Extend scripts/utils/ibm_helpers.py with functions for backend filtering, sorting, and selection based on various criteria (e.g., least busy, lowest error rates, specific architecture requirements). Include visualizations of qubit connectivity and quality metrics."
+        },
+        {
+          "id": 3,
+          "title": "Develop circuit submission and job management notebook",
+          "description": "Create a notebook and utilities for submitting quantum circuits to IBM hardware and managing the execution queue",
+          "status": "pending",
+          "dependencies": [
+            2
+          ],
+          "details": "Create notebooks/03_ibm_quantum/03_job_submission.ipynb covering: 1) Preparing circuits for hardware execution, 2) Submitting jobs to quantum backends, 3) Monitoring job status and queue position, 4) Handling job cancellation and resubmission. Extend scripts/utils/ibm_helpers.py with job submission wrapper functions that include error handling and automatic resubmission options. Implement queue management utilities that help users optimize their usage of IBM Quantum resources, including estimating wait times and selecting less busy backends."
+        },
+        {
+          "id": 4,
+          "title": "Implement results retrieval and analysis notebook",
+          "description": "Create a notebook demonstrating how to retrieve, process, and visualize results from quantum hardware executions",
+          "status": "pending",
+          "dependencies": [
+            3
+          ],
+          "details": "Create notebooks/03_ibm_quantum/04_results_analysis.ipynb that covers: 1) Retrieving results from completed jobs, 2) Processing and formatting raw results data, 3) Creating visualizations of measurement outcomes, 4) Calculating relevant metrics from results (e.g., expectation values, fidelities). Extend scripts/utils/ibm_helpers.py with result processing utilities that handle the conversion between IBM Quantum result formats and project-specific data structures. Include examples of saving and loading results for later analysis."
+        },
+        {
+          "id": 5,
+          "title": "Create hardware vs. simulator comparison notebook",
+          "description": "Develop a notebook comparing results from quantum simulators with real quantum hardware to demonstrate quantum noise and error effects",
+          "status": "pending",
+          "dependencies": [
+            4
+          ],
+          "details": "Create notebooks/03_ibm_quantum/05_hardware_vs_simulator.ipynb that: 1) Executes identical circuits on both simulators and real hardware, 2) Compares and visualizes the differences in results, 3) Demonstrates the impact of noise and decoherence on real hardware, 4) Shows techniques for error mitigation. Include examples with different types of circuits (e.g., simple gates, entanglement, algorithms) to illustrate how hardware limitations affect different quantum operations. Extend scripts/utils/ibm_helpers.py with comparison utilities that calculate metrics like fidelity between ideal and noisy results."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Implement fundamental quantum algorithms",
+      "description": "Create detailed implementations of foundational quantum algorithms with step-by-step explanations and visualizations.",
+      "status": "pending",
+      "dependencies": [
+        3
+      ],
+      "priority": "high",
+      "details": "Create notebooks/04_algorithms/ directory with notebooks implementing: 1) Deutsch-Jozsa algorithm, 2) Bernstein-Vazirani algorithm, 3) Grover's search algorithm, 4) Quantum Fourier Transform. For each algorithm, include: theoretical background and mathematical explanation, step-by-step circuit construction, visualization of intermediate states, comparison of results between simulator and real hardware (where feasible). Create modular implementations in scripts/algorithms/ that can be imported and reused. Include exercises that challenge users to modify the algorithms for different problem instances. Add visualization of algorithm performance scaling compared to classical counterparts.",
+      "testStrategy": "Verify algorithm implementations by testing with known inputs and comparing outputs to theoretical expectations. Test edge cases for each algorithm. Ensure visualizations correctly represent the quantum states at each step. Verify that the modular implementations can be correctly imported and used in other notebooks.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create directory structure and framework for algorithm implementations",
+          "description": "Set up the necessary directory structure and create template files for algorithm implementations with consistent structure and styling",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create notebooks/04_algorithms/ directory. Create scripts/algorithms/ directory for modular implementations. Design template notebook structure with sections for: theoretical background, mathematical explanation, circuit construction, state visualization, and hardware comparison. Create base visualization utilities and helper functions for quantum state display. Establish consistent styling and documentation standards across all algorithm implementations."
+        },
+        {
+          "id": 2,
+          "title": "Implement Deutsch-Jozsa algorithm",
+          "description": "Create comprehensive implementation of the Deutsch-Jozsa algorithm with theoretical background and visualizations",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Implement Deutsch-Jozsa algorithm in both notebook and modular script form. Include mathematical background explaining the problem it solves (determining if a function is constant or balanced). Create step-by-step circuit construction with explanations of each gate's purpose. Visualize the quantum states at key points in the algorithm. Compare results between simulator and real hardware where feasible. Include exercises for users to modify the algorithm for different oracle functions. Create visualization showing the algorithm's O(1) scaling compared to classical O(2^n) approach."
+        },
+        {
+          "id": 3,
+          "title": "Implement Bernstein-Vazirani algorithm",
+          "description": "Create comprehensive implementation of the Bernstein-Vazirani algorithm with theoretical background and visualizations",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Implement Bernstein-Vazirani algorithm in both notebook and modular script form. Include mathematical background explaining the problem it solves (finding a hidden bitstring). Create step-by-step circuit construction with explanations of each gate's purpose. Visualize the quantum states at key points in the algorithm. Compare results between simulator and real hardware where feasible. Include exercises for users to modify the algorithm for different hidden bitstrings. Create visualization showing the algorithm's O(1) scaling compared to classical O(n) approach."
+        },
+        {
+          "id": 4,
+          "title": "Implement Quantum Fourier Transform",
+          "description": "Create comprehensive implementation of the Quantum Fourier Transform with theoretical background and visualizations",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Implement Quantum Fourier Transform in both notebook and modular script form. Include mathematical background explaining the transform and its relationship to classical Fourier transform. Create step-by-step circuit construction with explanations of each gate's purpose. Visualize the quantum states before and after the transform. Compare results between simulator and real hardware where feasible. Include exercises for users to apply QFT to different input states. Create visualizations showing how QFT transforms different basis states. Implement both the standard QFT circuit and the more efficient circuit with O(n²) gates."
+        },
+        {
+          "id": 5,
+          "title": "Implement Grover's search algorithm",
+          "description": "Create comprehensive implementation of Grover's search algorithm with theoretical background and visualizations",
+          "status": "pending",
+          "dependencies": [
+            1,
+            4
+          ],
+          "details": "Implement Grover's search algorithm in both notebook and modular script form. Include mathematical background explaining the problem it solves (searching an unstructured database). Create step-by-step circuit construction with explanations of each component (oracle, diffusion operator). Visualize the quantum states after each Grover iteration. Compare results between simulator and real hardware where feasible. Include exercises for users to modify the algorithm for different search problems. Create visualization showing the algorithm's O(√N) scaling compared to classical O(N) approach. Demonstrate how the optimal number of iterations depends on the database size."
+        },
+        {
+          "id": 6,
+          "title": "Create comparative analysis and performance benchmarking",
+          "description": "Develop comprehensive comparison of all implemented algorithms with performance analysis and scaling visualizations",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "details": "Create a summary notebook comparing all implemented algorithms. Develop visualizations showing performance scaling of each quantum algorithm compared to classical counterparts. Benchmark implementations on simulators of different sizes and real quantum hardware where feasible. Create interactive elements allowing users to compare algorithm performance across different problem sizes. Analyze and visualize the impact of noise on algorithm performance when run on real hardware. Compile all exercises into a cohesive set of challenges that build upon each other. Ensure all modular implementations in scripts/algorithms/ are properly documented and can be easily imported and reused."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Develop advanced quantum algorithms tutorials",
+      "description": "Create tutorials for advanced quantum algorithms including VQE, QAOA, and quantum machine learning approaches.",
+      "status": "pending",
+      "dependencies": [
+        5
+      ],
+      "priority": "medium",
+      "details": "Create notebooks/05_advanced_algorithms/ directory with notebooks covering: 1) Variational Quantum Eigensolver (VQE), 2) Quantum Approximate Optimization Algorithm (QAOA), 3) Quantum Machine Learning basics. For each algorithm, provide: theoretical foundation and use cases, implementation details with parameterized circuits, optimization procedures and classical processing components, visualization of convergence and results. Create reusable components in scripts/advanced_algorithms/ for custom ansatzes, optimizers, and problem encodings. Include examples of applying these algorithms to simple real-world problems (e.g., MaxCut for QAOA, H2 molecule for VQE). Add exercises for extending the algorithms to more complex problems.",
+      "testStrategy": "Test VQE implementation on simple molecules and compare results with known values. Verify QAOA implementation on small graph problems with known solutions. Test convergence behavior with different optimizers and parameters. Ensure all visualizations correctly represent the algorithm progress and results.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create directory structure and reusable components framework",
+          "description": "Set up the directory structure for advanced algorithms tutorials and establish the framework for reusable components",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create notebooks/05_advanced_algorithms/ directory for tutorial notebooks. Create scripts/advanced_algorithms/ directory for reusable components. Implement base classes and interfaces for: custom ansatzes, optimizers, problem encodings, and result visualization utilities. Include documentation templates and testing framework for the components."
+        },
+        {
+          "id": 2,
+          "title": "Implement VQE core components and utilities",
+          "description": "Develop the core components needed for the Variational Quantum Eigensolver tutorial",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "In scripts/advanced_algorithms/, implement: 1) Hamiltonian construction utilities for molecular systems, 2) Parameterized circuit ansatzes (hardware-efficient, UCCSD), 3) Energy estimation functions, 4) Parameter optimization wrappers, 5) Convergence tracking and visualization tools. Include unit tests for each component."
+        },
+        {
+          "id": 3,
+          "title": "Create comprehensive VQE tutorial notebook",
+          "description": "Develop a complete tutorial notebook for the Variational Quantum Eigensolver algorithm",
+          "status": "pending",
+          "dependencies": [
+            2
+          ],
+          "details": "Create notebooks/05_advanced_algorithms/01_variational_quantum_eigensolver.ipynb with: 1) Theoretical foundation of VQE, 2) Step-by-step implementation using the components from subtask 2, 3) Complete example of H2 molecule ground state calculation, 4) Visualization of energy convergence, 5) Analysis of results compared to classical solutions, 6) Exercises for extending to larger molecules or different ansatzes. Include explanatory text, diagrams, and code comments."
+        },
+        {
+          "id": 4,
+          "title": "Implement QAOA core components and utilities",
+          "description": "Develop the core components needed for the Quantum Approximate Optimization Algorithm tutorial",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "In scripts/advanced_algorithms/, implement: 1) Graph problem encoding utilities (focus on MaxCut), 2) QAOA circuit construction with parameterized mixing and problem Hamiltonians, 3) Cost function evaluation, 4) Classical optimization strategies for QAOA, 5) Solution visualization tools. Include unit tests for each component."
+        },
+        {
+          "id": 5,
+          "title": "Create comprehensive QAOA tutorial notebook",
+          "description": "Develop a complete tutorial notebook for the Quantum Approximate Optimization Algorithm",
+          "status": "pending",
+          "dependencies": [
+            4
+          ],
+          "details": "Create notebooks/05_advanced_algorithms/02_quantum_approximate_optimization.ipynb with: 1) Theoretical foundation of QAOA, 2) Step-by-step implementation using the components from subtask 4, 3) Complete example of MaxCut problem on small graphs, 4) Visualization of optimization landscape and solution quality, 5) Analysis of performance vs. classical algorithms, 6) Exercises for different graph problems or parameter strategies. Include explanatory text, diagrams, and code comments."
+        },
+        {
+          "id": 6,
+          "title": "Implement quantum machine learning components and utilities",
+          "description": "Develop the core components needed for quantum machine learning tutorials",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "In scripts/advanced_algorithms/, implement: 1) Data encoding circuits (amplitude encoding, angle encoding), 2) Variational quantum classifiers, 3) Quantum kernel methods, 4) Training and validation utilities, 5) Performance metrics and visualization tools. Include unit tests for each component and ensure compatibility with classical ML frameworks."
+        },
+        {
+          "id": 7,
+          "title": "Create comprehensive quantum machine learning tutorial notebook",
+          "description": "Develop a complete tutorial notebook for quantum machine learning approaches",
+          "status": "pending",
+          "dependencies": [
+            6
+          ],
+          "details": "Create notebooks/05_advanced_algorithms/03_quantum_machine_learning.ipynb with: 1) Theoretical foundation of quantum ML approaches, 2) Step-by-step implementation of a variational quantum classifier, 3) Implementation of quantum kernel methods, 4) Complete example of binary classification on a simple dataset, 5) Visualization of training process and decision boundaries, 6) Comparison with classical ML methods, 7) Exercises for different datasets or model architectures. Include explanatory text, diagrams, and code comments."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Implement error mitigation and advanced simulation techniques",
+      "description": "Create tutorials on quantum noise modeling, error mitigation techniques, and advanced Qiskit Aer features.",
+      "status": "pending",
+      "dependencies": [
+        4,
+        6
+      ],
+      "priority": "medium",
+      "details": "Create notebooks/06_error_mitigation/ directory with notebooks covering: 1) Quantum noise models and their implementation in Qiskit, 2) Error mitigation techniques (zero-noise extrapolation, measurement error mitigation), 3) Advanced Aer simulator features and customization. Include examples of running circuits with and without noise models. Implement error mitigation techniques and demonstrate their effectiveness on simple algorithms. Create utility functions in scripts/utils/error_mitigation.py for common error mitigation tasks. Add visualizations comparing results before and after error mitigation. Include exercises for applying error mitigation to previously implemented algorithms.",
+      "testStrategy": "Test noise models by comparing noisy simulation results with real hardware results. Verify error mitigation techniques improve results by measuring fidelity improvements. Test advanced Aer features with complex circuits to ensure they work as expected. Ensure all utility functions handle edge cases appropriately.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create directory structure and implement basic noise models",
+          "description": "Set up the notebooks/06_error_mitigation/ directory and create the first notebook on quantum noise models in Qiskit",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create the directory structure for error mitigation notebooks. Implement the first notebook covering basic noise models in Qiskit including: depolarizing error, thermal relaxation, amplitude damping, phase damping, and Pauli errors. Include code examples showing how to define these noise models and apply them to simple circuits. Compare noiseless vs. noisy simulation results with visualizations. Demonstrate how to create custom noise models based on device calibration data."
+        },
+        {
+          "id": 2,
+          "title": "Implement utility functions for error mitigation",
+          "description": "Create a utility module with reusable functions for error mitigation techniques",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create scripts/utils/error_mitigation.py module with utility functions for: 1) Applying different noise models to circuits, 2) Zero-noise extrapolation implementation, 3) Measurement error mitigation using calibration matrices, 4) Functions to compare and visualize results before and after mitigation. Include comprehensive docstrings and type hints. Add unit tests for these utility functions in tests/utils/test_error_mitigation.py."
+        },
+        {
+          "id": 3,
+          "title": "Develop notebook on zero-noise extrapolation",
+          "description": "Create a notebook demonstrating zero-noise extrapolation error mitigation technique",
+          "status": "pending",
+          "dependencies": [
+            1,
+            2
+          ],
+          "details": "Create a notebook focused on zero-noise extrapolation (ZNE) technique. Explain the theoretical foundation of ZNE. Implement examples showing: 1) How to scale noise in circuits, 2) Running circuits at different noise levels, 3) Extrapolating to zero-noise limit using linear, polynomial, and exponential models. Include a case study applying ZNE to a simple algorithm (e.g., QAOA or VQE) and visualize the improvement in results. Use the utility functions from error_mitigation.py. Add exercises for users to experiment with different extrapolation methods."
+        },
+        {
+          "id": 4,
+          "title": "Develop notebook on measurement error mitigation",
+          "description": "Create a notebook demonstrating measurement error mitigation techniques",
+          "status": "pending",
+          "dependencies": [
+            1,
+            2
+          ],
+          "details": "Create a notebook focused on measurement error mitigation. Explain readout errors and their impact. Implement complete examples of: 1) Calibrating measurement errors using complete and tensored methods, 2) Creating calibration matrices, 3) Applying correction to noisy results. Demonstrate the technique on multi-qubit circuits with visualization of results before and after mitigation. Compare different calibration methods and their effectiveness. Include exercises for applying measurement error mitigation to previously implemented algorithms."
+        },
+        {
+          "id": 5,
+          "title": "Develop notebook on advanced Aer simulator features",
+          "description": "Create a notebook showcasing advanced features and customization options in Qiskit Aer",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create a notebook covering advanced Qiskit Aer simulator features including: 1) Different simulation methods (statevector, density matrix, stabilizer, MPS), 2) Custom gate definitions and noise models, 3) Snapshot instructions for circuit debugging, 4) Performance optimization techniques, 5) Simulating specific hardware backends. Include benchmarking of different simulation methods and their appropriate use cases. Demonstrate how to access and interpret detailed simulation data. Add exercises for customizing simulation parameters for specific algorithms."
+        },
+        {
+          "id": 6,
+          "title": "Integrate error mitigation with previous algorithms",
+          "description": "Create a notebook demonstrating how to apply error mitigation techniques to algorithms from previous modules",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "details": "Create a comprehensive notebook that applies the error mitigation techniques to algorithms implemented in previous modules. Include: 1) Application of noise models to Grover's algorithm, 2) Zero-noise extrapolation applied to VQE, 3) Measurement error mitigation for QAOA, 4) Combined mitigation strategies for quantum phase estimation. Create visualizations comparing algorithm performance with and without error mitigation. Analyze the effectiveness of different mitigation strategies for different algorithm types. Include challenging exercises that require students to implement custom error mitigation approaches for specific problems."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Develop real-world quantum application examples",
+      "description": "Create application-focused tutorials for quantum chemistry, optimization, and machine learning using Qiskit domain libraries.",
+      "status": "pending",
+      "dependencies": [
+        6,
+        7
+      ],
+      "priority": "medium",
+      "details": "Create notebooks/07_applications/ directory with subdirectories for different application areas: 1) Quantum Chemistry (using Qiskit Nature): molecular simulations, energy calculations, 2) Optimization Problems (using Qiskit Optimization): traveling salesman, portfolio optimization, 3) Machine Learning (using Qiskit Machine Learning): quantum kernels, variational classifiers. For each application area, include: explanation of how quantum computing provides advantages, step-by-step implementation of example problems, visualization of results and comparison with classical approaches. Create reusable components in scripts/applications/ for problem encoding and result analysis. Include mini-projects with guided instructions for users to extend the examples.",
+      "testStrategy": "Test chemistry examples by comparing calculated energies with known values. Verify optimization examples find correct solutions for small problem instances. Test machine learning examples on standard datasets and measure classification accuracy. Ensure all domain libraries are correctly integrated and examples run without dependency issues.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Set up project directory structure for application examples",
+          "description": "Create the necessary directory structure for organizing quantum application examples across different domains",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create the main notebooks/07_applications/ directory with subdirectories for each application area: quantum_chemistry/, optimization/, and machine_learning/. Also create the scripts/applications/ directory for reusable components. Add README files in each directory explaining the purpose and structure. Set up common utilities and helper functions that will be used across examples."
+        },
+        {
+          "id": 2,
+          "title": "Develop quantum chemistry examples using Qiskit Nature",
+          "description": "Create comprehensive tutorials for molecular simulations and energy calculations using Qiskit Nature",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Implement 2-3 quantum chemistry examples in notebooks/07_applications/quantum_chemistry/: (1) Ground state energy calculation for H2 or LiH molecules, (2) Bond dissociation energy calculation, and (3) Molecular property prediction. Each notebook should include theoretical background, quantum advantage explanation, step-by-step implementation, and result visualization. Create reusable components in scripts/applications/chemistry_utils.py for molecule encoding, Hamiltonian generation, and result analysis."
+        },
+        {
+          "id": 3,
+          "title": "Develop optimization problem examples using Qiskit Optimization",
+          "description": "Create tutorials for solving classical optimization problems using quantum algorithms",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Implement 2-3 optimization examples in notebooks/07_applications/optimization/: (1) Traveling Salesman Problem with QAOA, (2) Portfolio optimization with VQE, and (3) Graph coloring or MaxCut problem. Each notebook should include problem formulation, QUBO conversion, circuit implementation, and solution visualization. Create reusable components in scripts/applications/optimization_utils.py for problem encoding, result parsing, and classical benchmark comparisons."
+        },
+        {
+          "id": 4,
+          "title": "Develop quantum machine learning examples using Qiskit Machine Learning",
+          "description": "Create tutorials demonstrating quantum machine learning techniques for classification and feature mapping",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Implement 2-3 quantum machine learning examples in notebooks/07_applications/machine_learning/: (1) Quantum kernel methods for classification, (2) Variational quantum classifier for a simple dataset, and (3) Quantum feature maps for dimensionality reduction. Each notebook should include dataset preparation, quantum circuit design, training process, and performance evaluation. Create reusable components in scripts/applications/ml_utils.py for data preprocessing, model evaluation, and visualization."
+        },
+        {
+          "id": 5,
+          "title": "Implement classical comparison benchmarks for all examples",
+          "description": "Add classical solution methods to each application example for performance comparison",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4
+          ],
+          "details": "For each application example, implement corresponding classical solution methods to demonstrate quantum advantage or trade-offs. For chemistry examples, use classical computational chemistry methods. For optimization, implement classical solvers like simulated annealing or branch-and-bound. For machine learning, implement classical kernel methods or neural networks. Create visualization functions to compare quantum vs. classical results in terms of accuracy, runtime, and scaling behavior."
+        },
+        {
+          "id": 6,
+          "title": "Create guided mini-projects for each application domain",
+          "description": "Develop extension exercises with guided instructions for users to build upon the examples",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4
+          ],
+          "details": "For each application domain, create 1-2 mini-projects that extend the base examples: (1) For chemistry, guide users to simulate a different molecule or calculate different properties, (2) For optimization, provide a new problem instance or constraint type, (3) For machine learning, suggest using a different dataset or modifying the quantum circuit architecture. Include starter code, clear instructions, expected outcomes, and hints for implementation challenges."
+        },
+        {
+          "id": 7,
+          "title": "Finalize documentation and cross-reference application examples",
+          "description": "Complete all documentation, ensure consistency across examples, and add cross-references between related concepts",
+          "status": "pending",
+          "dependencies": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "details": "Review all notebooks for consistent style, terminology, and quality. Add comprehensive introductions to each application domain explaining the quantum advantage. Create a master README.md in the applications directory that summarizes all examples and guides users on which to explore based on their interests. Add cross-references between related concepts across different application domains (e.g., how VQE is used in both chemistry and optimization). Ensure all code is well-commented and follows best practices."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Create contribution guidelines and collaboration framework",
+      "description": "Develop comprehensive documentation for contribution workflow, code standards, and community engagement.",
+      "status": "pending",
+      "dependencies": [
+        1
+      ],
+      "priority": "low",
+      "details": "Create docs/CONTRIBUTING.md with detailed guidelines for: code style and formatting standards, notebook structure and documentation requirements, pull request and code review process, issue reporting templates. Develop docs/CODE_OF_CONDUCT.md outlining community behavior expectations. Create example templates for new notebooks, scripts, and documentation in docs/templates/. Set up GitHub issue templates for bug reports, feature requests, and content suggestions. Write a guide for setting up development environment with pre-commit hooks for code quality. Include examples of good pull requests and contributions to serve as references.",
+      "testStrategy": "Review all documentation for clarity and completeness. Test the contribution workflow by simulating a new contribution following the guidelines. Verify that templates are functional and easy to use. Ensure all links and references in documentation are valid.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create core contribution documentation",
+          "description": "Develop the main CONTRIBUTING.md file with comprehensive guidelines for code style, formatting standards, and contribution workflow",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create docs/CONTRIBUTING.md covering: code style conventions (indentation, naming, comments), formatting standards, notebook structure requirements, documentation guidelines, and the overall contribution workflow. Include sections on how to set up the development environment with pre-commit hooks for code quality. Reference industry standard practices where applicable and provide clear examples for each guideline."
+        },
+        {
+          "id": 2,
+          "title": "Develop code of conduct document",
+          "description": "Create CODE_OF_CONDUCT.md outlining community behavior expectations and enforcement procedures",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create docs/CODE_OF_CONDUCT.md that defines acceptable community behavior, communication standards, and enforcement procedures. Base this on established templates like the Contributor Covenant, but customize it for this project's specific community needs. Include sections on: scope of application, expected behaviors, unacceptable behaviors, enforcement responsibilities, reporting guidelines, and consequences for violations."
+        },
+        {
+          "id": 3,
+          "title": "Create template files for contributions",
+          "description": "Develop standardized templates for notebooks, scripts, and documentation",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create a docs/templates/ directory with example templates for: new notebooks (.ipynb with standard sections and documentation), Python scripts (.py with header, imports, and function structure), and documentation files (.md with proper formatting). Each template should follow the standards defined in CONTRIBUTING.md and include placeholder comments explaining each section's purpose. Add a README.md in the templates directory explaining how to use each template."
+        },
+        {
+          "id": 4,
+          "title": "Set up GitHub issue templates",
+          "description": "Create standardized templates for bug reports, feature requests, and content suggestions",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Set up GitHub issue templates in the .github/ISSUE_TEMPLATE/ directory. Create separate YAML-formatted templates for: bug reports (with sections for reproduction steps, expected vs. actual behavior, environment details), feature requests (with sections for problem statement, proposed solution, alternatives considered), and content suggestions (with sections for content type, rationale, outline). Each template should include appropriate labels and provide clear guidance to submitters."
+        },
+        {
+          "id": 5,
+          "title": "Document pull request process and examples",
+          "description": "Create comprehensive documentation for the PR workflow with examples of good contributions",
+          "status": "pending",
+          "dependencies": [
+            1,
+            3,
+            4
+          ],
+          "details": "Enhance the CONTRIBUTING.md with a detailed section on the pull request process including: linking PRs to issues, required PR template usage, code review expectations and timelines, and merge criteria. Create a docs/examples/ directory with 2-3 annotated examples of high-quality pull requests that demonstrate proper documentation, code quality, testing, and addressing reviewer feedback. Include a pull request template in .github/PULL_REQUEST_TEMPLATE.md that prompts contributors to provide context, testing details, and checklist of requirements."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Develop comprehensive documentation and project roadmap",
+      "description": "Create detailed documentation, learning paths, and future development roadmap for the project.",
+      "status": "pending",
+      "dependencies": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "priority": "low",
+      "details": "Create docs/README.md with project overview, goals, and quick start guide. Develop docs/LEARNING_PATHS.md with suggested learning sequences for different user profiles (beginners, developers, researchers). Create docs/ROADMAP.md outlining future development plans and opportunities for contribution. Develop a comprehensive index of all notebooks and scripts with descriptions in docs/CONTENT_INDEX.md. Create FAQ document addressing common questions and issues. Include a glossary of quantum computing terms in docs/GLOSSARY.md. Add documentation on how to cite the project for academic use. Create visual diagrams showing the relationships between different components of the project.",
+      "testStrategy": "Review all documentation for accuracy, clarity, and completeness. Test navigation between documents to ensure a coherent user experience. Verify that all content is properly indexed and findable. Have users with different backgrounds review the learning paths for appropriateness.",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create project overview and quick start documentation",
+          "description": "Develop the main README.md file with project overview, goals, and quick start guide",
+          "status": "pending",
+          "dependencies": [],
+          "details": "Create docs/README.md containing: 1) Project title and tagline, 2) Overview of what the project does, 3) Key features and capabilities, 4) Project goals and vision, 5) Installation instructions, 6) Quick start guide with basic examples, 7) License information, and 8) Contact information for maintainers. Format using clear Markdown with appropriate headings, code blocks for commands, and screenshots if relevant."
+        },
+        {
+          "id": 2,
+          "title": "Develop learning paths documentation",
+          "description": "Create structured learning paths for different user profiles",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create docs/LEARNING_PATHS.md with: 1) Introduction explaining the purpose of learning paths, 2) Beginner path with fundamentals of quantum computing and basic usage of the project, 3) Developer path focusing on extending the project and contributing code, 4) Researcher path emphasizing advanced quantum algorithms and applications, 5) Each path should include recommended sequence of notebooks/resources, estimated time commitments, and prerequisites. Include cross-references to relevant notebooks and external resources."
+        },
+        {
+          "id": 3,
+          "title": "Create project roadmap document",
+          "description": "Outline future development plans and contribution opportunities",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create docs/ROADMAP.md containing: 1) Current project status and version information, 2) Short-term goals (next 3-6 months), 3) Medium-term goals (6-12 months), 4) Long-term vision, 5) Specific planned features and enhancements, 6) Areas open for community contribution, 7) Known limitations to be addressed. Format the roadmap with clear timelines, priorities, and status indicators for each planned item."
+        },
+        {
+          "id": 4,
+          "title": "Develop content index and glossary",
+          "description": "Create a comprehensive index of all project content and a glossary of quantum terms",
+          "status": "pending",
+          "dependencies": [
+            1
+          ],
+          "details": "Create two documents: 1) docs/CONTENT_INDEX.md with a table listing all notebooks and scripts, including title, brief description, complexity level, and prerequisites, organized by category; 2) docs/GLOSSARY.md with alphabetically sorted definitions of quantum computing terms used throughout the project, including cross-references to relevant notebooks where concepts are explained in detail."
+        },
+        {
+          "id": 5,
+          "title": "Create FAQ and citation guidelines",
+          "description": "Develop FAQ document and instructions for academic citation",
+          "status": "pending",
+          "dependencies": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "details": "Create two documents: 1) docs/FAQ.md addressing common questions about installation, usage, troubleshooting, and conceptual clarifications, organized by topic; 2) docs/CITATION.md with instructions for citing the project in academic work, including BibTeX entries, DOI information if available, and guidelines for citing specific components of the project. Ensure FAQs address questions that might arise from all user profiles identified in the learning paths."
+        },
+        {
+          "id": 6,
+          "title": "Develop visual documentation components",
+          "description": "Create visual diagrams showing relationships between project components",
+          "status": "pending",
+          "dependencies": [
+            1,
+            3,
+            4
+          ],
+          "details": "Create docs/ARCHITECTURE.md containing: 1) High-level architecture diagram showing major components and their interactions, 2) Workflow diagrams for key processes, 3) Dependency graphs showing relationships between different modules, 4) Visual learning path flowcharts that complement the text-based learning paths. Use tools like Mermaid, PlantUML, or draw.io to create diagrams, and include both the source files and rendered images in the documentation."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectName": "Quantum Computing with Qiskit — Hands-On Practical Course",
+    "totalTasks": 10,
+    "sourceFile": "scripts/PRD.txt",
+    "generatedAt": "2023-06-14"
+  }
+}

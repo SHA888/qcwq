@@ -1,0 +1,43 @@
+# Task ID: 4
+# Title: Develop IBM Quantum hardware integration guide
+# Status: pending
+# Dependencies: 3
+# Priority: medium
+# Description: Create tutorials for connecting to IBM Quantum hardware, submitting jobs, and analyzing results from real quantum computers.
+# Details:
+Create notebooks/03_ibm_quantum/ directory with notebooks covering: 1) Setting up IBM Quantum account and saving credentials, 2) Exploring available quantum backends and their properties, 3) Submitting circuits to real quantum hardware, 4) Analyzing and visualizing results from quantum hardware. Write a detailed guide on obtaining and configuring IBM Quantum API token. Create utility functions in scripts/utils/ibm_helpers.py for backend selection, job submission, and result retrieval. Include examples comparing simulator results with real hardware results to demonstrate quantum noise and errors. Add a notebook on queue management and job monitoring for efficient use of IBM Quantum resources.
+
+# Test Strategy:
+Test the account setup process with a test token. Verify job submission works correctly by running a simple circuit on both simulator and least-busy real backend. Check that results are properly retrieved and visualized. Test error handling for common issues like authentication failures or backend unavailability.
+
+# Subtasks:
+## 1. Create IBM Quantum account setup and authentication notebook [pending]
+### Dependencies: None
+### Description: Develop a notebook that guides users through creating an IBM Quantum account, obtaining API tokens, and configuring credentials for authentication
+### Details:
+Create notebooks/03_ibm_quantum/01_account_setup.ipynb that covers: 1) Step-by-step instructions for creating an IBM Quantum account, 2) Detailed guide on obtaining the API token from the IBM Quantum platform, 3) Code examples for storing and loading credentials securely, 4) Verification steps to confirm successful authentication. Include screenshots of the IBM Quantum dashboard where relevant. Create initial version of scripts/utils/ibm_helpers.py with authentication helper functions.
+
+## 2. Implement backend exploration and selection utilities [pending]
+### Dependencies: 4.1
+### Description: Create utilities for discovering available quantum backends and a notebook demonstrating how to explore their properties and capabilities
+### Details:
+Create notebooks/03_ibm_quantum/02_backend_exploration.ipynb that: 1) Shows how to list available backends, 2) Demonstrates retrieving and interpreting backend properties (qubits, connectivity, error rates, etc.), 3) Explains backend status and availability checking. Extend scripts/utils/ibm_helpers.py with functions for backend filtering, sorting, and selection based on various criteria (e.g., least busy, lowest error rates, specific architecture requirements). Include visualizations of qubit connectivity and quality metrics.
+
+## 3. Develop circuit submission and job management notebook [pending]
+### Dependencies: 4.2
+### Description: Create a notebook and utilities for submitting quantum circuits to IBM hardware and managing the execution queue
+### Details:
+Create notebooks/03_ibm_quantum/03_job_submission.ipynb covering: 1) Preparing circuits for hardware execution, 2) Submitting jobs to quantum backends, 3) Monitoring job status and queue position, 4) Handling job cancellation and resubmission. Extend scripts/utils/ibm_helpers.py with job submission wrapper functions that include error handling and automatic resubmission options. Implement queue management utilities that help users optimize their usage of IBM Quantum resources, including estimating wait times and selecting less busy backends.
+
+## 4. Implement results retrieval and analysis notebook [pending]
+### Dependencies: 4.3
+### Description: Create a notebook demonstrating how to retrieve, process, and visualize results from quantum hardware executions
+### Details:
+Create notebooks/03_ibm_quantum/04_results_analysis.ipynb that covers: 1) Retrieving results from completed jobs, 2) Processing and formatting raw results data, 3) Creating visualizations of measurement outcomes, 4) Calculating relevant metrics from results (e.g., expectation values, fidelities). Extend scripts/utils/ibm_helpers.py with result processing utilities that handle the conversion between IBM Quantum result formats and project-specific data structures. Include examples of saving and loading results for later analysis.
+
+## 5. Create hardware vs. simulator comparison notebook [pending]
+### Dependencies: 4.4
+### Description: Develop a notebook comparing results from quantum simulators with real quantum hardware to demonstrate quantum noise and error effects
+### Details:
+Create notebooks/03_ibm_quantum/05_hardware_vs_simulator.ipynb that: 1) Executes identical circuits on both simulators and real hardware, 2) Compares and visualizes the differences in results, 3) Demonstrates the impact of noise and decoherence on real hardware, 4) Shows techniques for error mitigation. Include examples with different types of circuits (e.g., simple gates, entanglement, algorithms) to illustrate how hardware limitations affect different quantum operations. Extend scripts/utils/ibm_helpers.py with comparison utilities that calculate metrics like fidelity between ideal and noisy results.
+

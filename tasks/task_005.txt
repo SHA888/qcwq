@@ -1,0 +1,49 @@
+# Task ID: 5
+# Title: Implement fundamental quantum algorithms
+# Status: pending
+# Dependencies: 3
+# Priority: high
+# Description: Create detailed implementations of foundational quantum algorithms with step-by-step explanations and visualizations.
+# Details:
+Create notebooks/04_algorithms/ directory with notebooks implementing: 1) Deutsch-Jozsa algorithm, 2) Bernstein-Vazirani algorithm, 3) Grover's search algorithm, 4) Quantum Fourier Transform. For each algorithm, include: theoretical background and mathematical explanation, step-by-step circuit construction, visualization of intermediate states, comparison of results between simulator and real hardware (where feasible). Create modular implementations in scripts/algorithms/ that can be imported and reused. Include exercises that challenge users to modify the algorithms for different problem instances. Add visualization of algorithm performance scaling compared to classical counterparts.
+
+# Test Strategy:
+Verify algorithm implementations by testing with known inputs and comparing outputs to theoretical expectations. Test edge cases for each algorithm. Ensure visualizations correctly represent the quantum states at each step. Verify that the modular implementations can be correctly imported and used in other notebooks.
+
+# Subtasks:
+## 1. Create directory structure and framework for algorithm implementations [pending]
+### Dependencies: None
+### Description: Set up the necessary directory structure and create template files for algorithm implementations with consistent structure and styling
+### Details:
+Create notebooks/04_algorithms/ directory. Create scripts/algorithms/ directory for modular implementations. Design template notebook structure with sections for: theoretical background, mathematical explanation, circuit construction, state visualization, and hardware comparison. Create base visualization utilities and helper functions for quantum state display. Establish consistent styling and documentation standards across all algorithm implementations.
+
+## 2. Implement Deutsch-Jozsa algorithm [pending]
+### Dependencies: 5.1
+### Description: Create comprehensive implementation of the Deutsch-Jozsa algorithm with theoretical background and visualizations
+### Details:
+Implement Deutsch-Jozsa algorithm in both notebook and modular script form. Include mathematical background explaining the problem it solves (determining if a function is constant or balanced). Create step-by-step circuit construction with explanations of each gate's purpose. Visualize the quantum states at key points in the algorithm. Compare results between simulator and real hardware where feasible. Include exercises for users to modify the algorithm for different oracle functions. Create visualization showing the algorithm's O(1) scaling compared to classical O(2^n) approach.
+
+## 3. Implement Bernstein-Vazirani algorithm [pending]
+### Dependencies: 5.1
+### Description: Create comprehensive implementation of the Bernstein-Vazirani algorithm with theoretical background and visualizations
+### Details:
+Implement Bernstein-Vazirani algorithm in both notebook and modular script form. Include mathematical background explaining the problem it solves (finding a hidden bitstring). Create step-by-step circuit construction with explanations of each gate's purpose. Visualize the quantum states at key points in the algorithm. Compare results between simulator and real hardware where feasible. Include exercises for users to modify the algorithm for different hidden bitstrings. Create visualization showing the algorithm's O(1) scaling compared to classical O(n) approach.
+
+## 4. Implement Quantum Fourier Transform [pending]
+### Dependencies: 5.1
+### Description: Create comprehensive implementation of the Quantum Fourier Transform with theoretical background and visualizations
+### Details:
+Implement Quantum Fourier Transform in both notebook and modular script form. Include mathematical background explaining the transform and its relationship to classical Fourier transform. Create step-by-step circuit construction with explanations of each gate's purpose. Visualize the quantum states before and after the transform. Compare results between simulator and real hardware where feasible. Include exercises for users to apply QFT to different input states. Create visualizations showing how QFT transforms different basis states. Implement both the standard QFT circuit and the more efficient circuit with O(n²) gates.
+
+## 5. Implement Grover's search algorithm [pending]
+### Dependencies: 5.1, 5.4
+### Description: Create comprehensive implementation of Grover's search algorithm with theoretical background and visualizations
+### Details:
+Implement Grover's search algorithm in both notebook and modular script form. Include mathematical background explaining the problem it solves (searching an unstructured database). Create step-by-step circuit construction with explanations of each component (oracle, diffusion operator). Visualize the quantum states after each Grover iteration. Compare results between simulator and real hardware where feasible. Include exercises for users to modify the algorithm for different search problems. Create visualization showing the algorithm's O(√N) scaling compared to classical O(N) approach. Demonstrate how the optimal number of iterations depends on the database size.
+
+## 6. Create comparative analysis and performance benchmarking [pending]
+### Dependencies: 5.2, 5.3, 5.4, 5.5
+### Description: Develop comprehensive comparison of all implemented algorithms with performance analysis and scaling visualizations
+### Details:
+Create a summary notebook comparing all implemented algorithms. Develop visualizations showing performance scaling of each quantum algorithm compared to classical counterparts. Benchmark implementations on simulators of different sizes and real quantum hardware where feasible. Create interactive elements allowing users to compare algorithm performance across different problem sizes. Analyze and visualize the impact of noise on algorithm performance when run on real hardware. Compile all exercises into a cohesive set of challenges that build upon each other. Ensure all modular implementations in scripts/algorithms/ are properly documented and can be easily imported and reused.
+

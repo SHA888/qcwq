@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "generatedAt": "2025-04-25T04:24:53.542Z",
+    "tasksAnalyzed": 10,
+    "thresholdScore": 5,
+    "projectName": "Your Project Name",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Set up project structure and environment configuration",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the setup into subtasks such as directory creation, requirements specification, installation guide writing for multiple OSes, validation script development, and creation of example notebooks/scripts.",
+      "reasoning": "This task involves multiple distinct activities (directory setup, dependency management, cross-platform documentation, validation scripting, and example code), each requiring attention to detail but following well-established best practices. Complexity is moderate due to the need for cross-platform support and automation."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Develop Qiskit basics notebooks and scripts",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Divide the work into subtasks for each notebook topic, script implementation, exercise creation, visualization integration, and review for educational clarity.",
+      "reasoning": "This task requires both technical implementation and pedagogical design, with multiple notebooks, interactive exercises, and corresponding scripts. Complexity is increased by the need for clear explanations, code accuracy, and user engagement."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Implement quantum gates and circuits tutorials",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Identify subtasks for each gate/circuit notebook, utility function development, interactive exercise creation, visualization, and challenge design.",
+      "reasoning": "The task covers a broad range of quantum concepts, requires interactive and visual content, and utility code for reuse. The need for accuracy, depth, and interactivity raises the complexity."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Develop IBM Quantum hardware integration guide",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down into subtasks for account setup, backend exploration, job submission, result analysis, utility function development, and queue management documentation.",
+      "reasoning": "Integrating with external hardware and APIs introduces additional complexity, including credential management, real-time job handling, and comparison of simulator vs. hardware results."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Implement fundamental quantum algorithms",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Create subtasks for each algorithm's notebook, modular script implementation, visualization, simulator/hardware comparison, exercise creation, and performance analysis.",
+      "reasoning": "Implementing multiple algorithms with theoretical background, stepwise construction, and comparative analysis requires deep domain knowledge and careful structuring, making this a complex task."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Develop advanced quantum algorithms tutorials",
+      "complexityScore": 9,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "List subtasks for each advanced algorithm, reusable component development, optimization integration, real-world application examples, visualization, and extension exercises.",
+      "reasoning": "Advanced algorithms like VQE and QAOA involve hybrid quantum-classical workflows, parameter optimization, and domain-specific applications, significantly increasing technical and conceptual complexity."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Implement error mitigation and advanced simulation techniques",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down into subtasks for noise model tutorials, error mitigation technique implementation, advanced simulator usage, utility function development, comparative visualizations, and applied exercises.",
+      "reasoning": "This task requires understanding and implementing advanced simulation features, error mitigation strategies, and integrating them with previous algorithms, adding to its complexity."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Develop real-world quantum application examples",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Identify subtasks for each application area, problem encoding, step-by-step implementation, result visualization, reusable component development, classical comparison, and mini-project creation.",
+      "reasoning": "Covering multiple application domains with domain-specific libraries, comparative analysis, and extensible examples requires broad expertise and careful coordination, making this a high-complexity task."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Create contribution guidelines and collaboration framework",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Divide into subtasks for writing contribution guidelines, code of conduct, template creation, GitHub workflow setup, and example contributions.",
+      "reasoning": "While largely documentation-focused, this task requires thoroughness and clarity to ensure community standards and smooth collaboration, but follows established patterns."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Develop comprehensive documentation and project roadmap",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down into subtasks for project overview, learning paths, roadmap drafting, content indexing, FAQ/glossary creation, citation/documentation, and visual diagram development.",
+      "reasoning": "Comprehensive documentation and roadmap creation involves synthesizing information from all project areas, structuring learning paths, and ensuring accessibility, which is complex but methodical."
+    }
+  ]
+}

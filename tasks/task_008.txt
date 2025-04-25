@@ -1,0 +1,55 @@
+# Task ID: 8
+# Title: Develop real-world quantum application examples
+# Status: pending
+# Dependencies: 6, 7
+# Priority: medium
+# Description: Create application-focused tutorials for quantum chemistry, optimization, and machine learning using Qiskit domain libraries.
+# Details:
+Create notebooks/07_applications/ directory with subdirectories for different application areas: 1) Quantum Chemistry (using Qiskit Nature): molecular simulations, energy calculations, 2) Optimization Problems (using Qiskit Optimization): traveling salesman, portfolio optimization, 3) Machine Learning (using Qiskit Machine Learning): quantum kernels, variational classifiers. For each application area, include: explanation of how quantum computing provides advantages, step-by-step implementation of example problems, visualization of results and comparison with classical approaches. Create reusable components in scripts/applications/ for problem encoding and result analysis. Include mini-projects with guided instructions for users to extend the examples.
+
+# Test Strategy:
+Test chemistry examples by comparing calculated energies with known values. Verify optimization examples find correct solutions for small problem instances. Test machine learning examples on standard datasets and measure classification accuracy. Ensure all domain libraries are correctly integrated and examples run without dependency issues.
+
+# Subtasks:
+## 1. Set up project directory structure for application examples [pending]
+### Dependencies: None
+### Description: Create the necessary directory structure for organizing quantum application examples across different domains
+### Details:
+Create the main notebooks/07_applications/ directory with subdirectories for each application area: quantum_chemistry/, optimization/, and machine_learning/. Also create the scripts/applications/ directory for reusable components. Add README files in each directory explaining the purpose and structure. Set up common utilities and helper functions that will be used across examples.
+
+## 2. Develop quantum chemistry examples using Qiskit Nature [pending]
+### Dependencies: 8.1
+### Description: Create comprehensive tutorials for molecular simulations and energy calculations using Qiskit Nature
+### Details:
+Implement 2-3 quantum chemistry examples in notebooks/07_applications/quantum_chemistry/: (1) Ground state energy calculation for H2 or LiH molecules, (2) Bond dissociation energy calculation, and (3) Molecular property prediction. Each notebook should include theoretical background, quantum advantage explanation, step-by-step implementation, and result visualization. Create reusable components in scripts/applications/chemistry_utils.py for molecule encoding, Hamiltonian generation, and result analysis.
+
+## 3. Develop optimization problem examples using Qiskit Optimization [pending]
+### Dependencies: 8.1
+### Description: Create tutorials for solving classical optimization problems using quantum algorithms
+### Details:
+Implement 2-3 optimization examples in notebooks/07_applications/optimization/: (1) Traveling Salesman Problem with QAOA, (2) Portfolio optimization with VQE, and (3) Graph coloring or MaxCut problem. Each notebook should include problem formulation, QUBO conversion, circuit implementation, and solution visualization. Create reusable components in scripts/applications/optimization_utils.py for problem encoding, result parsing, and classical benchmark comparisons.
+
+## 4. Develop quantum machine learning examples using Qiskit Machine Learning [pending]
+### Dependencies: 8.1
+### Description: Create tutorials demonstrating quantum machine learning techniques for classification and feature mapping
+### Details:
+Implement 2-3 quantum machine learning examples in notebooks/07_applications/machine_learning/: (1) Quantum kernel methods for classification, (2) Variational quantum classifier for a simple dataset, and (3) Quantum feature maps for dimensionality reduction. Each notebook should include dataset preparation, quantum circuit design, training process, and performance evaluation. Create reusable components in scripts/applications/ml_utils.py for data preprocessing, model evaluation, and visualization.
+
+## 5. Implement classical comparison benchmarks for all examples [pending]
+### Dependencies: 8.2, 8.3, 8.4
+### Description: Add classical solution methods to each application example for performance comparison
+### Details:
+For each application example, implement corresponding classical solution methods to demonstrate quantum advantage or trade-offs. For chemistry examples, use classical computational chemistry methods. For optimization, implement classical solvers like simulated annealing or branch-and-bound. For machine learning, implement classical kernel methods or neural networks. Create visualization functions to compare quantum vs. classical results in terms of accuracy, runtime, and scaling behavior.
+
+## 6. Create guided mini-projects for each application domain [pending]
+### Dependencies: 8.2, 8.3, 8.4
+### Description: Develop extension exercises with guided instructions for users to build upon the examples
+### Details:
+For each application domain, create 1-2 mini-projects that extend the base examples: (1) For chemistry, guide users to simulate a different molecule or calculate different properties, (2) For optimization, provide a new problem instance or constraint type, (3) For machine learning, suggest using a different dataset or modifying the quantum circuit architecture. Include starter code, clear instructions, expected outcomes, and hints for implementation challenges.
+
+## 7. Finalize documentation and cross-reference application examples [pending]
+### Dependencies: 8.2, 8.3, 8.4, 8.5, 8.6
+### Description: Complete all documentation, ensure consistency across examples, and add cross-references between related concepts
+### Details:
+Review all notebooks for consistent style, terminology, and quality. Add comprehensive introductions to each application domain explaining the quantum advantage. Create a master README.md in the applications directory that summarizes all examples and guides users on which to explore based on their interests. Add cross-references between related concepts across different application domains (e.g., how VQE is used in both chemistry and optimization). Ensure all code is well-commented and follows best practices.
+

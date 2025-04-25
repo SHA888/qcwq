@@ -1,0 +1,69 @@
+# Product Requirements Document (PRD)
+
+## Project Title: Quantum Computing with Qiskit — Hands-On Practical Course
+
+### Overview
+A comprehensive, beginner-to-advanced, hands-on course and codebase for learning quantum computing using Qiskit. The project provides Jupyter notebooks, Python scripts, and real-world examples, guiding users from setup to advanced quantum algorithms and applications, with a strong emphasis on experimentation, visualization, and practical coding.
+
+### Goals
+- Make quantum computing accessible and practical for learners, students, and professionals.
+- Provide a structured, self-paced learning path from basics to real-world applications.
+- Enable hands-on experimentation with Qiskit simulators and IBM Quantum hardware.
+- Foster an open, collaborative community for quantum learning and contribution.
+
+### Features
+1. **Environment Setup**
+   - Step-by-step installation guides for Python, Qiskit, Jupyter, and dependencies.
+   - Scripts to validate environment and run sample circuits.
+2. **Qiskit Basics**
+   - Notebooks and scripts for single- and multi-qubit circuits.
+   - Visualization of circuits, state vectors, and measurement results.
+   - Interactive exercises for modifying and running circuits.
+3. **Quantum Gates and Circuits**
+   - Demonstrations of all standard quantum gates (X, Y, Z, H, S, T, CX, CZ, etc).
+   - Creation and measurement of Bell, GHZ, and other entangled states.
+   - Hands-on tasks for building and analyzing custom circuits.
+4. **IBM Quantum Hardware Integration**
+   - Guide to setting up IBM Quantum account and credentials.
+   - Submitting jobs to real quantum devices and analyzing noise/errors.
+5. **Quantum Algorithms**
+   - Step-by-step implementations of key algorithms (Grover, Deutsch-Jozsa, Bernstein-Vazirani, VQE, QAOA, etc).
+   - Comparison between simulation and real hardware results.
+6. **Error Mitigation & Advanced Simulation**
+   - Tutorials on noise modeling, error mitigation, and advanced Aer features.
+   - Exercises for applying error mitigation in practice.
+7. **Real-World Applications**
+   - Example notebooks for quantum chemistry (Qiskit Nature), optimization (Qiskit Optimization), and machine learning (Qiskit ML).
+   - Hands-on projects for each application area.
+8. **Best Practices & Collaboration**
+   - Contribution guidelines, code style, and documentation standards.
+   - Sample issues, pull requests, and community engagement instructions.
+9. **Extensible Docs & Roadmap**
+   - Living roadmap and documentation in `docs/`.
+   - Encouragement for users to add new modules, notebooks, and resources.
+
+### Out of Scope
+- Hardware-level quantum control or device fabrication.
+- Proprietary or closed-source quantum SDKs.
+
+### Success Criteria
+- Users can follow the course from setup to advanced topics with minimal friction.
+- Users can run circuits on both simulators and real IBM Quantum hardware.
+- The community actively contributes new notebooks, scripts, and docs.
+- The codebase remains beginner-friendly and well-documented.
+
+### References
+- IBM Quantum Learning: https://learning.quantum.ibm.com/
+- Getting Started with Qiskit: https://learning.quantum.ibm.com/learning-path/getting-started-with-qiskit
+- Qiskit Documentation: https://qiskit.org/documentation/
+- arXiv: Quantum computing with Qiskit (2405.08810): https://arxiv.org/abs/2405.08810
+
+### Appendix: Example User Stories
+- As a student, I want to run my first quantum circuit and see the results visually.
+- As a developer, I want to experiment with quantum gates and build custom circuits.
+- As a researcher, I want to prototype algorithms and submit jobs to real quantum hardware.
+- As a contributor, I want clear guidelines for adding new content and collaborating.
+
+---
+
+_This PRD is a living document. Please update as the project evolves and new needs arise._
