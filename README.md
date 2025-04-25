@@ -45,6 +45,19 @@ A practical, step-by-step learning path is now available in [`docs/ROADMAP.md`](
 
 ---
 
+## 🛠️ Environment Validation
+
+After installing dependencies, validate your environment:
+
+```bash
+python scripts/validate_env.py
+```
+
+- This script checks for all required packages and prints their versions.
+- Missing packages are clearly reported for troubleshooting.
+
+---
+
 ## 🗂️ Documentation
 - [Project Roadmap](docs/ROADMAP.md)
 - [Contributing Guide](docs/CONTRIBUTING.md)

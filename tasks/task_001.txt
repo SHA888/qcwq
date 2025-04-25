@@ -23,7 +23,7 @@ Create the root project directory and the following subdirectories: `/notebooks`
 ### Details:
 Create requirements.txt in the root directory listing all required packages with version specifications: Qiskit (>=0.36.0), NumPy (>=1.20.0), Matplotlib (>=3.4.0), Jupyter (>=1.0.0), pytest (>=6.2.5). Include comments explaining the purpose of each dependency. Group dependencies by functionality (quantum computing, data analysis, visualization, development tools). Add instructions for installing with pip at the top of the file.
 
-## 3. Write cross-platform installation guide [pending]
+## 3. Write cross-platform installation guide [done]
 ### Dependencies: 1.2
 ### Description: Create comprehensive documentation for environment setup across different operating systems
 ### Details:

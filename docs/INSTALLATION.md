@@ -7,7 +7,7 @@ This guide walks you through setting up the environment, installing dependencies
 ## **📌 Prerequisites**
 Ensure you have the following installed:
 
-1. **Python 3.12+**
+1. **Python 3.8+** (recommended: latest 3.x)
 
    ```bash
    python3 --version
@@ -50,7 +50,7 @@ Here the step-by-step of the installation:
 ### 📌 Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/qcwq.git
+git clone https://github.com/SHA888/qcwq.git
 cd qcwq
 ```
 
@@ -111,7 +111,6 @@ Can be done in Terminal or IDE (e.g., VS Code)
     - Click "Open in Browser" when prompted.
     - Click "Run" and select the Python `(qiskit_env) Kernel`.
 
-
 ### Create a New Jupyter Notebook on Your Browser
 Once Jupyter Notebook is open:
 
@@ -128,7 +127,7 @@ Once Jupyter Notebook is open:
 Try this as your first quantum code!
 - **Copy and paste** it in your first Jupyter Notebook cell:
 
-    ```bash
+    ```python
     import quantum_circuits as qc
 
     # Create a quantum circuit in superposition
@@ -176,3 +175,94 @@ pip install pylatexenc
 ```bash
 python3 -m ipykernel install --user --name=qiskit_env --display-name "Python (qiskit_env)"
 ```
+
+---
+
+# Quantum Computing with Qiskit: Installation Guide
+
+This guide will help you set up your environment for hands-on quantum computing on Windows, macOS, and Linux.
+
+---
+
+## 1. Prerequisites
+- **Python 3.8+** (recommended: latest 3.x)
+- **Git**
+- **pip** (comes with Python)
+- **(Optional) Virtual environment tool:**
+  - `venv` (standard)
+  - `conda` (Anaconda/Miniconda)
+
+---
+
+## 2. Clone the Repository
+```bash
+git clone https://github.com/SHA888/qcwq.git
+cd qcwq
+```
+
+---
+
+## 3. Set Up a Virtual Environment (Recommended)
+
+### Using venv (all platforms)
+```bash
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+```
+
+### Using conda (if installed)
+```bash
+conda create -n qcwq python=3.10
+conda activate qcwq
+```
+
+---
+
+## 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+If you want advanced modules, uncomment and install the relevant lines in `requirements.txt` (e.g., Nature, Optimization, ML, Finance, Dynamics).
+
+---
+
+## 5. Verify Your Installation
+
+After installing dependencies, run the validation script:
+
+```bash
+python scripts/validate_env.py
+```
+
+- This script checks for all required packages and prints their versions.
+- Missing packages are clearly reported for troubleshooting.
+
+If validation fails, review the error messages and ensure you have installed all required dependencies.
+
+---
+
+## 6. Launch Jupyter Notebook
+```bash
+jupyter notebook
+```
+Open and run `notebooks/first_circuit.ipynb` to verify everything works.
+
+---
+
+## 7. Troubleshooting
+- If you encounter issues, ensure you are using the correct Python version and that your virtual environment is activated.
+- For help, see the [Qiskit Installation Guide](https://qiskit.org/documentation/getting_started.html) or open an issue in this repo.
+
+---
+
+## 8. Uninstalling
+Deactivate and remove your virtual environment:
+```bash
+deactivate  # or conda deactivate
+rm -rf .venv  # or conda env remove -n qcwq
+```
+
+---
+
+Happy Quantum Coding!

@@ -32,7 +32,7 @@
           "id": 3,
           "title": "Write cross-platform installation guide",
           "description": "Create comprehensive documentation for environment setup across different operating systems",
-          "status": "pending",
+          "status": "done",
           "dependencies": [
             2
           ],
